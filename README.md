@@ -2,8 +2,7 @@
 
 A lightweight json api network abstraction for flutter.
 
-Chlorine uses async functions and give a easy way to access
-by binding responses and errors to two different closures.
+Chlorine uses async functions and give a easy way to access the result by binding responses and errors to two different closures.
 
 ## Usage
 Import this package adding it [in your pubspec.yaml](https://flutter.io/docs/development/packages-and-plugins/using-packages#using-packages).

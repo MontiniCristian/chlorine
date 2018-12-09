@@ -1,5 +1,8 @@
 name: chlorine
-description: A new Flutter project.
+description: "
+A lightweight json api network abstraction for Flutter and Dart.
+Chlorine uses async functions and give a easy way to access the result by binding responses and errors to two different closures.
+"
 
 author: "Montini Cristian <montinicristian@gmail.com>"
 
