@@ -5,24 +5,24 @@ import 'package:chlorine/chlorine_target.dart';
 class Chlorine {
   final ChlorineNetwork _chlorineNetwork = ChlorineNetwork();
 
-  jsonRequest(ChlorineTarget request, onSuccess(ChlorineSuccessResponse res),
+  jsonRequest(ChlorineTarget target, onSuccess(ChlorineSuccessResponse res),
       onError(ChlorineErrorResponse res)) async {
     try {
-      await this._chlorineNetwork.networkRequest(request, (response, error) {
+      await this._chlorineNetwork.networkRequest(target, (response, error) {
         if (response != null)
-          onSuccess(_createSuccessResponse(response, request));
-        else if (error != null) onError(_createErrorResponse(response, request));
+          onSuccess(_createSuccessResponse(response, target));
+        else if (error != null) onError(_createErrorResponse(response, target));
       });
     } catch (e) {
       throw ChlorineNetworkError();
     }
   }
 
-  _createSuccessResponse(ChlorineResponse response, ChlorineTarget request) {
+  _createSuccessResponse(ChlorineResponse response, ChlorineTarget target) {
     return ChlorineSuccessResponse()
       ..statusCode = response.statusCode
       ..headers = response.headers
-      ..results = request.successClosure(response.results);
+      ..results = target.successClosure(response.results);
   }
 
   _createErrorResponse(ChlorineResponse response, ChlorineTarget request) {

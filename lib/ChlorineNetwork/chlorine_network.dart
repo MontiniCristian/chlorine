@@ -8,9 +8,9 @@ import 'package:http/http.dart' as http;
 class ChlorineNetwork {
   ChlorineHttp chlorineHttp = ChlorineHttp();
 
-  networkRequest(ChlorineTarget request, completion(response, error)) async {
+  networkRequest(ChlorineTarget target, completion(response, error)) async {
     try {
-      http.Response response = await chlorineHttp.delegate(request);
+      http.Response response = await chlorineHttp.delegate(target);
       if (response.statusCode >= 200 && response.statusCode < 300) {
         completion(
             ChlorineResponse()
