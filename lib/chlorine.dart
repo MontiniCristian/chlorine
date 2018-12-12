@@ -3,8 +3,23 @@ import 'package:chlorine/ChlorineNetwork/chlorine_response.dart';
 import 'package:chlorine/chlorine_target.dart';
 
 class Chlorine {
+
   final ChlorineNetwork _chlorineNetwork = ChlorineNetwork();
 
+  /// Perform a request based on the passed [ChlorineTarget].
+  /// 
+  /// Access the result from the onSuccess callback and hadle errors
+  /// from the onError callback as follows:
+  /// 
+  /// ```
+  /// chlorine.jsonRequest(UserTarget().getUsers(),
+  ///   (response) {
+  ///     print(response.results);
+  ///   },
+  ///   (error) {
+  ///     print(error.results);
+  ///   });
+  /// ```
   jsonRequest(ChlorineTarget target, onSuccess(ChlorineSuccessResponse res),
       onError(ChlorineErrorResponse res)) async {
     try {
