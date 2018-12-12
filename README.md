@@ -6,7 +6,7 @@ Chlorine is a shortcut for everyone who needs an easy and uniform access to netw
 the ones who want to build a clear and maintenable json api access layer.
 
 ## Usage
-Import this package adding it [in your pubspec.yaml](https://flutter.io/docs/development/packages-and-plugins/using-packages#using-packages).
+Import this package by adding it [in your pubspec.yaml](https://flutter.io/docs/development/packages-and-plugins/using-packages#using-packages).
 
 ```yaml
 ...
@@ -53,8 +53,8 @@ class UserTarget {
 }
 ```
 
-As you can see a builder methods like getUser() and getUsers() should return a ChlorineTarget.
-Dart's [cascade notation](https://www.dartlang.org/guides/language/language-tour#cascade-notation-) make it very easy
+As you can see a builder methods like getUser() and getUsers() should returns a ChlorineTarget.
+Dart's [cascade notation](https://www.dartlang.org/guides/language/language-tour#cascade-notation-) makes it very easy
 to build different instances of the same object.
 
 Create a Chlorine instance and pass to it a builder method from
