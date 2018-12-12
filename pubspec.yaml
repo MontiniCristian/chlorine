@@ -1,7 +1,9 @@
 name: chlorine
 description: "
-A lightweight json api network abstraction for Flutter and Dart.
-Chlorine uses async functions and give a easy way to access the result by binding responses and errors to two different closures.
+A lightweight json-api oriented network abstraction for Dart and Flutter.
+
+Chlorine is a shortcut for everyone who needs an easy and uniform access to network calls, especially for
+the ones who want to build a clear and maintenable json api access layer.
 "
 
 author: "Montini Cristian <montinicristian@gmail.com>"

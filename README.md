@@ -1,8 +1,9 @@
 # Chlorine
 
-A lightweight json api network abstraction for flutter.
+A lightweight json-api oriented network abstraction for Dart and Flutter.
 
-Chlorine uses async functions and give a easy way to access the result by binding responses and errors to two different closures.
+Chlorine is a shortcut for everyone who needs an easy and uniform access to network calls, especially for
+the ones who want to build a clear and maintenable json api access layer.
 
 ## Usage
 Import this package adding it [in your pubspec.yaml](https://flutter.io/docs/development/packages-and-plugins/using-packages#using-packages).
@@ -57,7 +58,7 @@ Dart's [cascade notation](https://www.dartlang.org/guides/language/language-tour
 to build different instances of the same object.
 
 Create a Chlorine instance and pass to it a builder method from
-your target class and relative success and error closure:
+your target class and relative success and error callbacks:
 
 ```dart
 
